@@ -9,3 +9,4 @@ export const nftPortInstance = axios.create({
     Authorization: process.env.REACT_APP_NFT_PORT_KEY || "",
   },
 });
+

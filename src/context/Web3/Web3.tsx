@@ -19,8 +19,11 @@ import { getNfts } from "../../lib/nftp/getNfts";
 import { updateWalletAddresses } from "../../utils/Firestore/user/updateWalletAddresses";
 import { addNfts } from "../../utils/Firestore/nft/addNfts";
 import { getNFTs } from "../../lib/morails/getNfts";
-import { NftLoader } from "../../components";
+import { NftLoader, Loader } from "../../components";
 import useAuth from "../Auth/Auth";
+
+import router from "next/router";
+import { setItem } from "../../utils/localStorage/setItem";
 
 export type IAccountAddresses =
   | "ethAddresses"
@@ -179,7 +182,12 @@ export function Web3UtilityProvider({
 
   useEffect(() => {
     (async () => {
-      if (!isAuthenticated || !user) return;
+      if (!isAuthenticated || !user) {
+        setItem("walletAddress", walletAddress?.address);
+
+        // router.push("/onboard/"+walletAddress?.address);
+        //return <Loader />;
+      };
       if (walletAddress?.type && isAuthenticated) {
         setIsNFTLoading(true);
         const res = await updateWalletAddresses(

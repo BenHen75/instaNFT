@@ -2,6 +2,27 @@ import { IUser } from "../../../context/Auth/Auth";
 import { firestore } from "../../../Firebase";
 import { errorHandler } from "../../errorHandler";
 
+export interface Transactions {
+  blockHash: string;
+  blockNumber: number;
+  confirmations: number;
+  contractAddress: string;
+  cumulativeGasUsed: number;
+  from: string;
+  gas: number;
+  gasPrice: number;
+  gasUsed: number;
+  hash: string;
+  input: string;
+  isError: number;
+  nonce: number;
+  timeStamp: number;
+  to: string;
+  transactionIndex: number;
+  txreceipt_status: number;
+  value: number;
+}
+
 export interface INFT {
   uid?: string;
   likes?: string[];

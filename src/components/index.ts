@@ -52,3 +52,8 @@ export { NoItemsFound } from "./NoItemsFound/NoItemsFound";
 export { ReplyCard } from "./ReplyCard/ReplyCard";
 export { MenuBar } from "./MenuBar/MenuBar";
 export { TrophyModal } from "./TrophyModal/TrophyModal";
+export { Transaction } from "./Transaction/Transaction";
+export { TransactionEvents } from "./TransactionEvents/TransactionEvents";
+
+export { SidebarOnboard } from "./SidebarOnboard/SidebarOnboard";
+export { Stepper } from "./Stepper";

@@ -93,8 +93,8 @@ export function MenuBar(): JSX.Element {
           rounded="full"
           mx={2}
           onClick={() => {
-            if (router.pathname !== `/settings/display`) {
-              router.push(`/settings/display`);
+            if (router.pathname !== `/u/tribu`) {
+              router.push(`/u/tribu`);
             }
           }}
           bg="transparent"
